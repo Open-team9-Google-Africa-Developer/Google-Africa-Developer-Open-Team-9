@@ -5,15 +5,21 @@
 ## Project Description
 Safegurd is a security monitoring app that will help users to report crimes happening in their neighbourd as soon as the crime happens.
 
-It helps the users to report any incidents such as theft, mob justice, rape, murder, bullying or any other crimes and the admins ( in this case the police) to have visibility of what crimes are happening in their localities.
+It aids first-hand citizen report of any incident such as 
+- theft
+- mob justice
+- rape
+- murder
+- bullying or any other crimes 
+and also helps the admins (Security outfits) achieve visibility of what crimes are happening different geographical locations.
 
 
 ## Key Stakeholders
-- Police {Admins)
-- Civilians (Normal Users)
+- Security Outfits (Intelligence Unit Administrators)
+- Community members (civilian users)
 
 ## Functionality
-1. Normal Users
+1. Civilian Users
 ----------------------------------
 - The User can register for an account using their email/phone number
 - They can log into the system 
@@ -21,17 +27,21 @@ It helps the users to report any incidents such as theft, mob justice, rape, mur
 - Users can see the frequency of crimes and nature of crimes happening within their vicinity
 - User can see the status of the reported crimes
 
-2. Admins (The police)
+2. Intelligence Unit Administrators
 -------------------------------
 - They can see a report of reported crimes.
 - They can respond to a crime and update its status.
 - The can see a dashboard with statistics of the number of crimes happening within the community.
 
+3. Crime Research and Investigative Journalism
+-------------------------------
+- Intelligence gathered will be useful in statistics, data monitoring, data analysis and fact finding.
+- An application that solely documents crime from an individual in real time. It will solve the mystery of "WHEN" in criminal cases.
 
 ## Team Members
 - Herman Ceaser 
 - Robert Ngabomugisha
-- Mempho Esther 
+- Esther Apeh
 - Omar Farouk
 
  
