@@ -6,7 +6,8 @@ from .serializers import ComplaintSerializer
 class ComplaintList(generics.ListCreateAPIView):
     queryset = Complaint.complaintobjects.all()
     serializer_class = ComplaintSerializer
-    pass
+    
 
 class ComplaintDetail(generics.RetrieveDestroyAPIView):
-    pass
+    queryset = Complaint.objects.all()
+    serializer_class = ComplaintSerializer
