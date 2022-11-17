@@ -1,7 +1,11 @@
 from django.db import models
 from django.contrib.auth.models import AbstractUser
 from phonenumber_field.modelfields import PhoneNumberField
+from django.conf import settings
+from django.db.models.signals import post_save
+from django.dispatch import receiver
 
+from rest_framework.authtoken.models import Token
 from .manager import CustomUserManager
 # Create your models here.
 
@@ -31,3 +35,9 @@ class CustomUser(AbstractUser):
         if self.first_name:
             return self.first_name
         return self.email
+
+
+@receiver(post_save, sender=settings.AUTH_USER_MODEL)
+def create_token(sender, instance=None, created=False, **kwargs):
+    if created:
+        Token.objects.create(user=instance)

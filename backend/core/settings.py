@@ -42,11 +42,18 @@ INSTALLED_APPS = [
     "complaint_api",
     "phonenumber_field",
     "rest_framework",
+    "rest_framework.authtoken",
 ]
 
 
 # MODEL FOR AUTHORIZATION
 AUTH_USER_MODEL = "account.CustomUser"
+
+REST_FRAMEWORK = {
+    'DEFAULT_AUTHENTICATION_CLASSES': [
+        'rest_framework.authentication.TokenAuthentication',
+    ]
+}
 
 MIDDLEWARE = [
     "django.middleware.security.SecurityMiddleware",

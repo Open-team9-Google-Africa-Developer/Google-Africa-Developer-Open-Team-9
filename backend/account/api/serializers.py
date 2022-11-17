@@ -12,6 +12,7 @@ class RegistrationSerializer(serializers.ModelSerializer):
         extra_kwargs = { 'password': {'write_only': True}}
         
     def save(self):
+        
         user = CustomUser(
             email = self.validated_data['email'],
             phone_number = self.validated_data['phone_number'],
