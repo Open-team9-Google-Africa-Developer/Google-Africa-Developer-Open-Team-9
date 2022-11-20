@@ -2,6 +2,21 @@
 
 ## Project Name: Safeguard
 
+<img src="assets/desktop.png" alt="product Screenshot" width="640">
+
+<table>
+ <tr>
+ <td>
+    <img src="assets/mobile2.png" alt="product Screenshot" width="320"> 
+    </td>
+    <td> 
+    <img src="assets/mobile1.png" alt="product Screenshot" width="320">
+    </td>
+    
+   </tr> 
+   
+</table>
+
 ## Project Description
 Safegurd is a security monitoring app that will help users to report crimes happening in their neighbourd as soon as the crime happens.
 
@@ -12,6 +27,9 @@ It aids first-hand citizen report of any incident such as
 - murder
 - bullying or any other crimes 
 and also helps the admins (Security outfits) achieve visibility of what crimes are happening different geographical locations.
+
+
+
 
 
 ## Key Stakeholders
