@@ -1,5 +1,6 @@
 from django.db import models
 from django.contrib.auth.models import User
+from django.conf import settings
 from django.utils import timezone
 
 class Category(models.Model):
@@ -43,7 +44,7 @@ class Complaint(models.Model):
     description = models.TextField()
     location = models.CharField(max_length=255)
     complainant = models.ForeignKey(
-        User, on_delete=models.CASCADE, related_name='complaints'
+        settings.AUTH_USER_MODEL, on_delete=models.CASCADE, related_name='complaints'
     )
     status = models.CharField(max_length=100, choices=options, default='pending')
     created_at = models.DateTimeField(default=timezone.now)

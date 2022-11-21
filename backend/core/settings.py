@@ -37,10 +37,23 @@ INSTALLED_APPS = [
     "django.contrib.sessions",
     "django.contrib.messages",
     "django.contrib.staticfiles",
+    "account",
     "complaint",
     "complaint_api",
+    "phonenumber_field",
     "rest_framework",
+    "rest_framework.authtoken",
 ]
+
+
+# MODEL FOR AUTHORIZATION
+AUTH_USER_MODEL = "account.CustomUser"
+
+REST_FRAMEWORK = {
+    'DEFAULT_AUTHENTICATION_CLASSES': [
+        'rest_framework.authentication.TokenAuthentication',
+    ]
+}
 
 MIDDLEWARE = [
     "django.middleware.security.SecurityMiddleware",
@@ -107,6 +120,12 @@ TIME_ZONE = "UTC"
 USE_I18N = True
 
 USE_TZ = True
+
+# input formats
+DATE_INPUT_FORMATS = ['YYYY-MM-DD']
+
+# PHONE NUMBER DB FORMAT
+PHONENUMBER_DB_FORMAT = 'E164'
 
 
 # Static files (CSS, JavaScript, Images)
