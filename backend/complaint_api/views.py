@@ -3,20 +3,24 @@ from complaint.models import Complaint
 from .serializers import ComplaintSerializer
 from rest_framework import permissions
 
+
 class ComplaintUserWritePermission(permissions.BasePermission):
-    message = 'Editing Complaint is restricted to author only.'
-    
+    message = "Editing Complaint is restricted to author only."
+
     def has_object_permission(self, request, view, obj):
         if request.method in permissions.SAFE_METHODS:
             return True
         return obj.complainant == request.user
 
+
 class ComplaintList(generics.ListCreateAPIView):
     queryset = Complaint.complaintobjects.all()
     serializer_class = ComplaintSerializer
-    
 
-class ComplaintDetail(generics.RetrieveUpdateDestroyAPIView, ComplaintUserWritePermission):
+
+class ComplaintDetail(
+    generics.RetrieveUpdateDestroyAPIView, ComplaintUserWritePermission
+):
     permission_classes = [ComplaintUserWritePermission]
     queryset = Complaint.objects.all()
     serializer_class = ComplaintSerializer

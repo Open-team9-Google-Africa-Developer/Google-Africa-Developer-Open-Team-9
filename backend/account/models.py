@@ -7,13 +7,16 @@ from django.dispatch import receiver
 
 from rest_framework.authtoken.models import Token
 from .manager import CustomUserManager
+
 # Create your models here.
+
 
 class CustomUser(AbstractUser):
 
-    """ 
+    """
     Custom User Model that Uses email as a unique username
     """
+
     is_admin = models.BooleanField(default=False)
 
     username = None
