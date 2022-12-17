@@ -1,13 +1,13 @@
 from rest_framework import generics
 from complaint.models import Complaint
 from .serializers import ComplaintSerializer
-from rest_framework import SAFE_METHODS, BasePermission
+from rest_framework import permissions
 
-class ComplaintUserWritePermission(BasePermission):
+class ComplaintUserWritePermission(permissions.BasePermission):
     message = 'Editing Complaint is restricted to author only.'
     
     def has_object_permission(self, request, view, obj):
-        if request.method in SAFE_METHODS:
+        if request.method in permissions.SAFE_METHODS:
             return True
         return obj.complainant == request.user
 
