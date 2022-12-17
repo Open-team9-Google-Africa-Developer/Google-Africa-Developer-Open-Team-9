@@ -35,7 +35,4 @@ blocks:
         - name: Deployment Checklist
           commands:
             - python manage.py check --deploy
-        - name: Style Check
-          commands:
-            - pip install flake8
-            - flake8 . --max-line-length=127
+       
